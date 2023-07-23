@@ -4,3 +4,4 @@ main: net.ssgssp.createfarmeco.CreateFarmECO
 api-version: '1.18'
 authors: [mrsongbyssgs]
 description: A plugin for createfarming
+softdepend: [XConomy]

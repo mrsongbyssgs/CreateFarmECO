@@ -18,7 +18,8 @@ public class BlkbreakEvListener implements Listener {
         String string1 = Objects.requireNonNull(plug1.getConfig().getString("words"));
         int max1 = plug1.getConfig().getInt("BlockbreakMax");
         int min1 = plug1.getConfig().getInt("BlockbreakMin");
-        net.ssgssp.createfarmeco.api.ECOapi.MessageSender(player1,max1,min1,string1);
+        boolean bool1 = plug1.getConfig().getBoolean("isPlayerOn");
+        net.ssgssp.createfarmeco.api.ECOapi.MessageSender(player1,max1,min1,string1,bool1);
 
 
     }
