@@ -1,6 +1,8 @@
 package net.ssgssp.createfarmeco;
 
 
+import org.bukkit.block.Block;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,8 +21,13 @@ public class BlkbreakEvListener implements Listener {
         int max1 = plug1.getConfig().getInt("BlockbreakMax");
         int min1 = plug1.getConfig().getInt("BlockbreakMin");
         boolean bool1 = plug1.getConfig().getBoolean("isPlayerOn");
-        net.ssgssp.createfarmeco.api.ECOapi.MessageSender(player1,max1,min1,string1,bool1);
-
-
+        Block block1 = bee.getBlock();
+        if(bee.isDropItems()){
+            if (block1.getType().name().toLowerCase().endsWith("ore")) {
+                if (!(player1.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH))) {
+                    net.ssgssp.createfarmeco.api.ECOapi.MessageSender(player1, max1, min1, string1, bool1);
+                }
+            }
+        }
     }
 }

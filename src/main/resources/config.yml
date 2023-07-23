@@ -2,9 +2,9 @@ words: '您获得了 VALUE $ 余额为 SOON $'
 #上方填写物品栏上方的显示内容，其中VALUE将被替换为玩家获得的金额，SOON将被替换为账户余额，SOON和VALUE必须出现在上方文本中
 #当isPlayerOn为true时，上方文本中的PLAYER字段将会被替换为玩家名
 BlockbreakMax: 46
-#破坏方块获得的最大金额
+#挖矿获得的最大金额
 BlockbreakMin: 2
-#破坏方块获得的最小金额
+#挖矿获得的最小金额
 HvMax: 46
 #收获作物获得的最大金额
 HvMin: 2

@@ -23,25 +23,27 @@ public final class ECOapi {
         }
         int inside = (Max + Min) / 2;
         Random random = new Random();
-        int random1 = random.nextInt(10) + 1;
-        if (random1 <= 9) {
-            int n1 = random.nextInt(inside - Min + 1) + Min;
-            String strX = String.valueOf(n1);
-            String stringN1 = string2.replace("VALUE", strX);
-            xcapi.changePlayerBalance(uuid1,playername,new BigDecimal(n1),true);
-            String stringA1 = xcapi.getPlayerData(uuid1).getBalance().toString();
-            String stringB1 = stringN1.replace("SOON",stringA1);
-            playerA.spigot().sendMessage(ChatMessageType.ACTION_BAR,new TextComponent(stringB1));
-        } else {
-            int n2 = random.nextInt(Max - inside + 1) + inside;
-            String strY = String.valueOf(n2);
-            String stringN2 = string2.replace("VALUE",strY);
-            xcapi.changePlayerBalance(uuid1,playername,new BigDecimal(n2),true);
-            String stringA2 = xcapi.getPlayerData(uuid1).getBalance().toString();
-            String stringB2 = stringN2.replace("SOON",stringA2);
-            playerA.spigot().sendMessage(ChatMessageType.ACTION_BAR,new TextComponent(stringB2));
+        int randomx = random.nextInt(100) + 1;
+        if(randomx <= 40) {
+            int random1 = random.nextInt(10) + 1;
+            if (random1 <= 9) {
+                int n1 = random.nextInt(inside - Min + 1) + Min;
+                String strX = String.valueOf(n1);
+                String stringN1 = string2.replace("VALUE", strX);
+                xcapi.changePlayerBalance(uuid1, playername, new BigDecimal(n1), true);
+                String stringA1 = xcapi.getPlayerData(uuid1).getBalance().toString();
+                String stringB1 = stringN1.replace("SOON", stringA1);
+                playerA.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(stringB1));
+            } else {
+                int n2 = random.nextInt(Max - inside + 1) + inside;
+                String strY = String.valueOf(n2);
+                String stringN2 = string2.replace("VALUE", strY);
+                xcapi.changePlayerBalance(uuid1, playername, new BigDecimal(n2), true);
+                String stringA2 = xcapi.getPlayerData(uuid1).getBalance().toString();
+                String stringB2 = stringN2.replace("SOON", stringA2);
+                playerA.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(stringB2));
+            }
         }
-
 
     }
 }
